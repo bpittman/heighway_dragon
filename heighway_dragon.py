@@ -1,6 +1,7 @@
 import sys
 sys.path.append("./pygooglechart")
 import pygooglechart as pgc
+import matplotlib.pyplot as plt
 
 def generate_string(iterations):
    a = "aRbFR"
@@ -47,7 +48,7 @@ def generate_coords(string):
             ycoords.append(ycoords[-1]-1)
    return xcoords, ycoords
 
-def plot(coords):
+def pgc_plot(coords):
    x = coords[0]
    y = coords[1]
    chart = pgc.XYLineChart(500, 500,
@@ -59,13 +60,17 @@ def plot(coords):
    #print len(chart.get_url())
    chart.download('output.png')
 
+def plt_plot(coords):
+   plt.plot(coords[0],coords[1])
+   plt.show()
+
 def normalize(x):
    while x >= 360: x -= 360
    while x < 0: x += 360
    return x
 
 if __name__ == "__main__":
-   print "D(0) =", generate_string(0)
-   print "D(1) =", generate_string(1)
-   print "D(2) =", generate_string(2)
-   plot(generate_coords(generate_string(8)))
+   #print "D(0) =", generate_string(0)
+   #print "D(1) =", generate_string(1)
+   #print "D(2) =", generate_string(2)
+   plt_plot(generate_coords(generate_string(15)))

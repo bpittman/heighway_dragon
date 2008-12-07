@@ -1,0 +1,13 @@
+Problem description from project euler:
+
+Let D_(0) be the two-letter string "Fa". For n≥1, derive D_(n) from D_(n-1) by the string-rewriting rules:
+
+"a" → "aRbFR"
+"b" → "LFaLb"
+
+Thus, D_(0) = "Fa", D_(1) = "FaRbFR", D_(2) = "FaRbFRRLFaLbFR", and so on.
+
+These strings can be interpreted as instructions to a computer graphics program, with "F" meaning "draw forward one unit", "L" meaning "turn left 90 degrees", "R" meaning "turn right 90 degrees", and "a" and "b" being ignored. The initial position of the computer cursor is (0,0), pointing up towards (0,1).
+
+Then D_(n) is an exotic drawing known as the Heighway Dragon of order n.
+

@@ -1,4 +1,4 @@
-def heighway_dragon(iterations):
+def generate_string(iterations):
    a = "aRbFR"
    b = "LFaLb"
    D = "Fa"
@@ -15,6 +15,6 @@ def heighway_dragon(iterations):
    return D
 
 if __name__ == "__main__":
-   print "D(0) =", heighway_dragon(0)
-   print "D(1) =", heighway_dragon(1)
-   print "D(2) =", heighway_dragon(2)
+   print "D(0) =", generate_string(0)
+   print "D(1) =", generate_string(1)
+   print "D(2) =", generate_string(2)

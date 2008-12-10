@@ -62,6 +62,7 @@ def pgc_plot(coords):
 
 def plt_plot(coords):
    plt.plot(coords[0],coords[1])
+   plt.axes().set_aspect('equal', 'datalim')
    plt.show()
 
 def normalize(x):
